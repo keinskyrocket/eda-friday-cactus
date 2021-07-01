@@ -1,13 +1,16 @@
 import React from 'react'
-import ChatBot from 'react-simple-chatbot'
-import steps from './chat_dialogue'
+import { Route } from 'react-router-dom'
+
+import Home from './Home'
+import Individual from './Individual'
+
 // import { ThemeProvider } from 'styled-components'
 
 function App () {
   return (
     <div>
-      <h1>Hello World</h1>
-      <ChatBot steps={steps} />
+      <Route exact path='/' render={() => < Home/>} />
+      <Route exact path='/profile' render={() => < Individual/>} />
     </div>
   )
 }
