@@ -1,6 +1,7 @@
 const personas = {
   personas: [
     {
+      id: 1,
       name: 'Keisuke',
       picture: 'tobeinclude',
       music: 'Dance',
@@ -8,6 +9,7 @@ const personas = {
       food: 'snapper'
     },
     {
+      id: 2,
       name: 'Kritika',
       picture: 'tobeinclude',
       music: 'indi',
@@ -15,6 +17,7 @@ const personas = {
       food: 'tank'
     },
     {
+      id: 3,
       name: 'Westley',
       picture: '',
       music: 'rock',
@@ -22,6 +25,7 @@ const personas = {
       food: 'hāngī'
     },
     {
+      id: 4,
       name: 'Kris',
       picture: 'tobeinclude',
       music: 'rock',
