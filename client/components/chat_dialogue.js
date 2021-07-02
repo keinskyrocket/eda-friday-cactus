@@ -1,24 +1,50 @@
+// import profile_name from './'
+
 const steps = [
   {
     id: '1',
-    message: "Morning Team Cactus, it's game day! Are you read to code?",
+    delay: 7000,
+    message: 'Hi {profile_name}, what is your favourite animal?',
     trigger: '2'
   },
   {
     id: '2',
-    options: [
-      { value: 1, label: 'Hell yeah', trigger: '4' },
-      { value: 2, label: 'Yeah na', trigger: '3' }
-    ]
+    user: true,
+    trigger: '3'
   },
   {
     id: '3',
-    message: 'Ah no way, well no pressure. Take your time.',
-    trigger: '1'
+    message: 'Wow, {previousValue}s are my favourite animal too! We have so much in common',
+    trigger: 4
   },
   {
     id: '4',
-    message: "Sweet as, let's get on the keys",
+    delay: 4000,
+    message: 'Would you like to go to the discotheque?',
+    trigger: '5'
+  },
+  {
+    id: '5',
+    options: [
+      { value: 1, label: 'Yes I love to dance', trigger: '6' },
+      { value: 2, label: "Yeah na, I'm washing my hair", trigger: '7' },
+      { value: 3, label: "Maybe, I'm not sure about you yet", trigger: '8' }
+    ]
+  },
+  {
+    id: '6',
+    message: 'Great, see you at 7pm :-)',
+    end: true
+  },
+  {
+    id: '7',
+    message: 'No problem, have a nice life :-(',
+    end: true
+
+  },
+  {
+    id: '8',
+    message: 'Ok, take your time, let me know',
     end: true
   }
 ]
@@ -26,8 +52,8 @@ const steps = [
 // all available props
 const theme = {
   background: '#f5f8fb',
-  fontFamily: 'Helvetica Neue',
-  headerBgColor: '#EF6C00',
+  fontFamily: 'Helvetica',
+  headerBgColor: '#27368b',
   headerFontColor: '#fff',
   headerFontSize: '15px',
   botBubbleColor: '#EF6C00',
@@ -36,16 +62,15 @@ const theme = {
   userFontColor: '#4a4a4a'
 }
 
-module.exports = { theme, steps }
-
 /// /////////////////////////////////////////
 /// //////add to file where component is used ////////////
 
-//   import ChatBot from 'react-simple-chatbot'
-//   import dialogue from './chat_dialogue'
+// import ChatBot from 'react-simple-chatbot'
+// import { steps, theme } from './chat_dialogue'
+// import { ThemeProvider } from 'styled-components'
 
-// <ChatBot
-// steps={dialogue}
-// />
+// <ThemeProvider theme={theme}>
+//  <ChatBot steps={steps} />;
+// </ThemeProvider>
 
-module.exports = steps
+module.exports = { steps, theme }

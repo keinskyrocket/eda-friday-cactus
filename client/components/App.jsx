@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route } from 'react-router-dom'
 
 import Home from './Home'
 import Individual from './Individual'
 
-// import { ThemeProvider } from 'styled-components'
+import { getPersonas } from '../api'
 
 function App () {
+  const [personas, setPersonas] = useState([])
+
+  useEffect(() => {
+    getPersonas()
+      .then(myPersona => {
+        setPersonas(myPersona)
+        return null
+      })
+      .catch(err => {
+        console.error(err)
+      })
+  }, [])
+
   return (
     <div>
-      <Route exact path='/' render={() => < Home/>} />
-      <Route exact path='/profile' render={() => < Individual/>} />
+      <Route exact path='/' render={() => <Home personas={personas} />} />
+      <Route exact path='/personas/:name' render={() => <Individual personas={personas} />} />
     </div>
   )
 }
