@@ -21,9 +21,7 @@ function Individual () {
       <section className='right-half'>
         <div className='outer'>
           <div className='inner'>
-            <div className='container'>
-              <ChatBot steps={steps} />
-            </div>
+            <ChatBot steps={steps} />
           </div>
         </div>
       </section>
