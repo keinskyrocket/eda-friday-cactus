@@ -6,20 +6,21 @@ function Home (props) {
 
   return (
     <section>
-      <h1>This is Home</h1>
+      <h1>Cactus Chatbox</h1>
+      <h2>Jump on a conversation with one of these avatars</h2>
       <main>
         <section className="container">
           <>
-            <ul>
               {personas.map(persona => (
-                <li key={persona.name}>
+                <article key={persona.name}>
+                  <img src="/images/avatar-01.svg" />
                   <Link to={`/personas/${persona.name}`}>{persona.name}</Link>
-                </li>
-              ))}
-            </ul>
+                </article>
+              ))}        
           </>
         </section>
       </main>
+      <h2>Note: This is a work of fiction. Any similarity to actual persons, living or dead, or actual events, is purely coincidental.</h2>
     </section>
   )
 }

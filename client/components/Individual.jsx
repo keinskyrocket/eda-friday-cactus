@@ -11,14 +11,19 @@ function Individual (props) {
   return (
     <>
       <section className='left-half'>
-        <h1>Welcome to Chatbox</h1>
-        <ul>
-          <li>All we know about {myItem.name} from Chatbox</li>
-          <li>Picture: {myItem.picture}</li>
-          <li>Music: {myItem.music}</li>
-          <li>Nationality: {myItem.nationality}</li>
-          <li>Food: {myItem.food}</li>
-        </ul>
+        <h1>Persona</h1>
+        <div className=''>
+          <h3>
+            <ul>
+              <li>All we know about {myItem.name} from Chatbox</li>
+              <li>Picture: {myItem.picture}</li>
+              <li>Music: {myItem.music}</li>
+              <li>Nationality: {myItem.nationality}</li>
+              <li>Food: {myItem.food}</li>
+            </ul>
+          </h3>
+        </div>
+
       </section>
       <section className='right-half'>
         <div className='outer'>
