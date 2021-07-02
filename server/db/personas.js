@@ -3,7 +3,7 @@ const personas = {
     {
       id: 1,
       name: 'Keisuke',
-      picture: 'tobeinclude',
+      picture: '/public/images/avatar-01.svg',
       music: 'Dance',
       nationality: 'Japanese',
       food: 'snapper'
@@ -11,7 +11,7 @@ const personas = {
     {
       id: 2,
       name: 'Kritika',
-      picture: 'tobeinclude',
+      picture: '',
       music: 'indi',
       nationality: 'India',
       food: 'tank'
@@ -27,7 +27,7 @@ const personas = {
     {
       id: 4,
       name: 'Kris',
-      picture: 'tobeinclude',
+      picture: '/public/images/avatar-02.svg',
       music: 'rock',
       nationality: 'British',
       food: 'pita-pit'
