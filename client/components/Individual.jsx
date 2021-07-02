@@ -15,12 +15,14 @@ function Individual (props) {
   return (
     <>
       <section className='left-half'>
-        <h1>Persona</h1>
+        <h1>{myItem.name}</h1>
         <div className=''>
           <h3>
+            <div className='image-center'>
+              <img className ='sm-image' src={myItem.picture} />
+            </div>
             <ul>
               <li>All we know about {myItem.name} from Chatbox</li>
-              <li>Picture: <img className ='sm-image' src={myItem.picture} /></li>
               <li>Music: {myItem.music}</li>
               <li>Nationality: {myItem.nationality}</li>
               <li>Food: {myItem.food}</li>
